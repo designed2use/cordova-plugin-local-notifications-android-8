@@ -123,7 +123,6 @@ public class Builder {
 
         builder = new NotificationCompat.Builder(context, options.getChannelID())
                 .setDefaults(0)
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setContentTitle(options.getTitle())
                 .setContentText(options.getText())
                 .setNumber(options.getBadgeNumber())
