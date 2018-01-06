@@ -1,5 +1,8 @@
 # cordova-plugin-local-notifications-android-8
-[![npm version](https://badge.fury.io/js/de.appplant.cordova.plugin.local-notification.svg)](http://badge.fury.io/js/de.appplant.cordova.plugin.local-notification)
+
+## Attempt to fix Android 8 Issue in:
+https://github.com/katzer/cordova-plugin-local-notifications/issues/1403
+
 [![PayPayl donate button](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=L3HKQCD9UA35A "Donate once-off to this project using Paypal")
 
 ## Important notice
