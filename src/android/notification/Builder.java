@@ -128,6 +128,7 @@ public class Builder {
                 .setTicker(options.getText())
                 .setAutoCancel(options.isAutoClear())
                 .setOngoing(options.isOngoing())
+                .setPriority(2)
                 .setColor(options.getColor());
 
         if (ledColor != 0) {
