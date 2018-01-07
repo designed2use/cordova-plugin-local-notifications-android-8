@@ -42,7 +42,36 @@ public class TriggerReceiver extends AbstractTriggerReceiver {
      */
     @Override
     public void onTrigger (Notification notification, boolean updated) {
+        Context context  = notification.getContext();
+        wakeUp(context);
         notification.show();
+    }
+    
+    /**
+     * Wakeup the device.
+     *
+     * @param context The application context.
+     */
+    private void wakeUp (Context context) {
+        PowerManager pm = (PowerManager) context.getSystemService(POWER_SERVICE);
+
+        if (pm == null)
+            return;
+
+        int level =   PowerManager.SCREEN_DIM_WAKE_LOCK
+                    | PowerManager.ACQUIRE_CAUSES_WAKEUP;
+
+        PowerManager.WakeLock wakeLock = pm.newWakeLock(
+                level, "LocalNotification");
+
+        wakeLock.setReferenceCounted(false);
+        wakeLock.acquire(1000);
+
+        if (SDK_INT >= LOLLIPOP) {
+            wakeLock.release(PowerManager.RELEASE_FLAG_WAIT_FOR_NO_PROXIMITY);
+        } else {
+            wakeLock.release();
+        }
     }
 
     /**
