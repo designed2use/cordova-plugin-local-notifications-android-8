@@ -23,6 +23,15 @@
 
 package de.appplant.cordova.plugin.notification;
 
+import android.content.Context;
+import android.os.PowerManager;
+
+
+import static android.content.Context.POWER_SERVICE;
+import static android.os.Build.VERSION.SDK_INT;
+import static android.os.Build.VERSION_CODES.LOLLIPOP;
+
+
 /**
  * The alarm receiver is triggered when a scheduled alarm is fired. This class
  * reads the information in the intent and displays this information in the
