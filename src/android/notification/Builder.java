@@ -129,6 +129,7 @@ public class Builder {
                 .setAutoCancel(options.isAutoClear())
                 .setOngoing(options.isOngoing())
                 .setPriority(2)
+                .setVisibility(1)
                 .setColor(options.getColor());
 
         if (ledColor != 0) {
